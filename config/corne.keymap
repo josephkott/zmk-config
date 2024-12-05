@@ -20,10 +20,10 @@
   };
 
   behaviors {
-    navcc: nav_cmd_ctrl {
+    symcc: sym_cmd_ctrl {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&mo NAV>, <&kp LCTRL>;
+      bindings = <&mo SYM>, <&kp RCTRL>;
       mods = <(MOD_LGUI)>;
       keep-mods = <(MOD_LGUI)>;
     };
@@ -35,10 +35,10 @@
     base {
       display-name = "alp";
       bindings = <
-        &kp Q  &kp W  &kp E     &kp R      &kp T   &kp Y    &kp U      &kp I      &kp O    &kp P
-        &kp A  &kp S  &kp D     &kp F      &kp G   &kp H    &kp J      &kp K      &kp L    &kp SEMI
-        &kp Z  &kp X  &kp C     &kp V      &kp B   &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH
-                      &kp LCMD  &kp SPACE  &navcc  &mo SYM  &kp SPACE  &kp RSHFT
+        &kp Q  &kp W  &kp E     &kp R      &kp T    &kp Y    &kp U      &kp I      &kp O    &kp P
+        &kp A  &kp S  &kp D     &kp F      &kp G    &kp H    &kp J      &kp K      &kp L    &kp SEMI
+        &kp Z  &kp X  &kp C     &kp V      &kp B    &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH
+                      &kp LCMD  &kp SPACE  &mo NAV  &symcc   &kp SPACE  &kp RSHFT
       >;
     };
     
