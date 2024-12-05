@@ -24,8 +24,8 @@
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&mo NAV>, <&kp LCTRL>;
-      mods = <(MOD_LCMD)>;
-      keep-mods = <(MOD_LCMD)>;
+      mods = <(MOD_LGUI)>;
+      keep-mods = <(MOD_LGUI)>;
     };
   };
 
@@ -55,10 +55,10 @@
     sym {
       display-name = "sym";
       bindings = <
-          &kp GRAVE  &kp N7  &kp N8   &kp N9   &kp N0     &kp LPAR   &kp RPAR  &kp STAR   &kp PRCNT  &kp BSPC
-          &kp TAB    &kp N4  &kp N5   &kp N6   &kp MINUS  &kp AT     &kp RCMD  &kp RALT   &kp RCTRL  &kp RSHFT
+          &kp GRAVE  &kp N7  &kp N8   &kp N9   &kp N0     &kp LPAR  &kp RPAR  &kp STAR   &kp PRCNT  &kp BSPC
+          &kp TAB    &kp N4  &kp N5   &kp N6   &kp MINUS  &kp AT    &kp RCMD  &kp RALT   &kp RCTRL  &kp RSHFT
           &none      &kp N1  &kp N2   &kp N3   &kp EQUAL  &kp PLUS  &kp HASH  &kp CARET  &kp AMPS   &kp EXCL
-                             &mo FN   &kp N0   &kp RET    &trans     &none     &none
+                             &mo FN   &kp N0   &kp RET    &trans    &none     &none
       >;
     };
 
