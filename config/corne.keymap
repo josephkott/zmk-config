@@ -27,6 +27,13 @@
       mods = <(MOD_LGUI)>;
       keep-mods = <(MOD_LGUI)>;
     };
+
+    rshftglb: rshift_globe {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp RSHFT>, <&kp GLOBE>;
+      mods = <(MOD_RSFT)>;
+    };
   };
 
   keymap {
@@ -38,17 +45,17 @@
         &kp Q  &kp W  &kp E     &kp R      &kp T    &kp Y    &kp U      &kp I      &kp O    &kp P
         &kp A  &kp S  &kp D     &kp F      &kp G    &kp H    &kp J      &kp K      &kp L    &kp SEMI
         &kp Z  &kp X  &kp C     &kp V      &kp B    &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH
-                      &kp LCMD  &kp SPACE  &mo NAV  &symcc   &kp SPACE  &kp RSHFT
+                      &kp LCMD  &kp SPACE  &mo NAV  &symcc   &kp SPACE  &rshftglb
       >;
     };
     
     nav {
       display-name = "nav";
       bindings = <
-        &kp ESC     &kp C_BRI_DN  &kp C_BRI_UP  &kp SAW        &kp C_AC_SEARCH  &kp LBKT  &kp RBKT  &kp BSLH   &kp UNDER  &kp BSPC
-        &kp LSHFT   &kp LCTRL     &kp LALT      &kp LCMD       &kp DQT          &kp SQT   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
-        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LG(SPACE)  &kp LG(LS(N4))   &kp INS   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
-                                  &kp LCMD      &mo FN         &trans           &kp RET   &kp BSPC  &kp RSHFT
+        &kp ESC     &kp C_BRI_DN  &kp C_BRI_UP  &kp SAW         &kp C_AC_SEARCH  &kp LBKT  &kp RBKT  &kp BSLH   &kp UNDER  &kp BSPC
+        &kp LSHFT   &kp LCTRL     &kp LALT      &kp LCMD        &kp DQT          &kp SQT   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+        &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp LG(LS(N4))  &none            &kp INS   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+                                  &kp LCMD      &mo FN          &trans           &kp RET   &kp BSPC  &kp RSHFT
       >;
     };
 
