@@ -33,6 +33,27 @@
       bindings = <&kp FSLH>, <&kp RCTRL>;
       mods = <(MOD_LGUI)>;
     };
+
+    spacepgup: space_page_up {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp SPACE>, <&kp PAGE_UP>;
+      mods = <(MOD_RSHFT)>;
+    };
+
+    uppgup: up_page_up {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp UP>, <&kp PAGE_UP>;
+      mods = <(MOD_RGUI)>;
+    };
+
+    dnpgdn: down_page_down {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
+      mods = <(MOD_RGUI)>;
+    };
   };
 
   keymap {
@@ -41,19 +62,19 @@
     base {
       display-name = "alp";
       bindings = <
-        &kp Q  &kp W  &kp E     &kp R    &kp T      &kp Y      &kp U      &kp I      &kp O    &pctrl
-        &kp A  &kp S  &kp D     &kp F    &kp G      &kp H      &kp J      &kp K      &kp L    &kp SEMI
-        &kp Z  &kp X  &kp C     &kp V    &kp B      &kp N      &kp M      &kp COMMA  &kp DOT  &fslhctrl
-                      &kp LGUI  &mo NNS  &kp SPACE  &kp SPACE  &kp RSHFT  &kp BSPC
+        &kp Q  &kp W  &kp E     &kp R    &kp T      &kp Y       &kp U      &kp I      &kp O    &pctrl
+        &kp A  &kp S  &kp D     &kp F    &kp G      &kp H       &kp J      &kp K      &kp L    &kp SEMI
+        &kp Z  &kp X  &kp C     &kp V    &kp B      &kp N       &kp M      &kp COMMA  &kp DOT  &fslhctrl
+                      &kp LGUI  &mo NNS  &kp SPACE  &spacepgup  &kp RSHFT  &kp BSPC
       >;
     };
 
     nns {
       display-name = "nns";
       bindings = <
-          &kp ESC   &kp N7  &kp N8    &kp N9  &kp N0           &kp LBKT   &kp RBKT   &kp BSLH   &kp MINUS  &kp EQUAL
-          &kp TAB   &kp N4  &kp N5    &kp N6  &kp C_AC_SEARCH  &kp SQT    &kp HOME   &kp UP     &kp END    &kp RGUI
-          &kp LALT  &kp N1  &kp N2    &kp N3  &kp GLOBE        &kp GRAVE  &kp LEFT   &kp DOWN   &kp RIGHT  &kp RCTRL
+          &kp ESC   &kp N7  &kp N8    &kp N9  &kp N0           &kp LBKT   &kp RBKT   &kp BSLH  &kp MINUS  &kp EQUAL
+          &kp TAB   &kp N4  &kp N5    &kp N6  &kp C_AC_SEARCH  &kp SQT    &kp HOME   &uppgup   &kp END    &kp RGUI
+          &kp LALT  &kp N1  &kp N2    &kp N3  &kp GLOBE        &kp GRAVE  &kp LEFT   &dnpgdn   &kp RIGHT  &kp RCTRL
                             &kp LGUI  &trans  &mo FN           &kp RET    &kp RSHFT  &kp BSPC
       >;
     };
