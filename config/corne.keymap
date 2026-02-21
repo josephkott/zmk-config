@@ -32,7 +32,7 @@
       #binding-cells = <0>;
       bindings = <&kp FSLH>, <&kp RCTRL>;
       mods = <(MOD_LGUI)>;
-    }
+    };
   };
 
   keymap {
