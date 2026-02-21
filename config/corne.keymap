@@ -38,7 +38,7 @@
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&kp SPACE>, <&kp PAGE_UP>;
-      mods = <(MOD_RSHFT)>;
+      mods = <(MOD_RSFT)>;
     };
 
     uppgup: up_page_up {
